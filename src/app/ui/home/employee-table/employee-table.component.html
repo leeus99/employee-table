@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Age</th>
+      <th>Department Name</th>
+      <th>Nationality</th>
+      <th>Account status(Yes/No)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of employees; let i = index">
+      <td>{{ employee.userId}}</td>
+      <td>{{ employee.name.first + " " + employee.name.last}}</td>
+      <td>{{ employee.age}}</td>
+      <td>{{ getDepartmentName(employee.departmentId)}}</td>
+      <td>{{ employee.nationality}}</td>
+      <td>{{ employee.isAccountActive ? "Yes" : "No"}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
